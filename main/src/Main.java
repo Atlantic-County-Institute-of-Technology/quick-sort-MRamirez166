@@ -1,6 +1,18 @@
-public class main(String[] args){
+//Martin Ramirez
+//March 17 2025
+//Purpose: Creating a Java quick sort
 
+//Calling the method so that the sort prints out in order from least to greatest.
 public class Main{
+    public static void main(String[] args) {
+        int[] array = {2, 9, 1, 7, 6};
+        System.out.println("Array: ");
+        System.out.println(array);
+        quickSort(array);
+        System.out.println("Sorted:");
+        System.out.print(array);
+
+    }
     private static void quickSort(int[] array) {
         //Arguments
         quickSort(array, 0, array.length - 1);
@@ -29,10 +41,16 @@ public class Main{
                 array[j] = temp;
             }
         }
+        //Switch array i and array with the lower value.
         int temp = array[i + 1];
         array[i+1] = array[high];
         array[high] = temp;
         return i + 1;
     }
-}
+    public static void printArray(int[] array){
+        for(int i : array){
+            System.out.print(i + " ");
+        }
+        System.out.println();
+    }
 }
