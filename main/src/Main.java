@@ -6,12 +6,10 @@
 public class Main{
     public static void main(String[] args) {
         int[] array = {2, 9, 1, 7, 6};
-        System.out.println("Array: ");
-        System.out.println(array);
         quickSort(array);
-        System.out.println("Sorted:");
-        System.out.print(array);
-
+        for(p == 0; p <= 5; p++){
+            System.out.print(array);
+        }
     }
     private static void quickSort(int[] array) {
         //Arguments
@@ -47,10 +45,13 @@ public class Main{
         array[high] = temp;
         return i + 1;
     }
+
+
     public static void printArray(int[] array){
         for(int i : array){
             System.out.print(i + " ");
         }
         System.out.println();
+
     }
 }
