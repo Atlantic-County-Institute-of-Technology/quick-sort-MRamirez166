@@ -2,18 +2,12 @@
 //March 17 2025
 //Purpose: Creating a Java quick sort
 
-//Calling the method so that the sort prints out in order from least to greatest.
+//Calling method and variables.
 public class Main{
     public static void main(String[] args) {
         int[] array = {2, 9, 1, 7, 6};
-        quickSort(array);
-        for(p == 0; p <= 5; p++){
-            System.out.print(array);
-        }
-    }
-    private static void quickSort(int[] array) {
-        //Arguments
         quickSort(array, 0, array.length - 1);
+        printArray(array);
     }
 
     private static void quickSort(int[] array, int low, int high) {
@@ -33,20 +27,20 @@ public class Main{
         for (int j = low; j < high; j++) {
             if (array[j] < change) {
                 i++;
-                //switch the position of value i and value j.
+                //swap the position of value i and value j.
                 int temp = array[i];
                 array[i] = array[j];
                 array[j] = temp;
             }
         }
-        //Switch array i and array with the lower value.
+        //swap array i and array with the lower value.
         int temp = array[i + 1];
         array[i+1] = array[high];
         array[high] = temp;
         return i + 1;
     }
 
-
+    //Display array in order on the console.
     public static void printArray(int[] array){
         for(int i : array){
             System.out.print(i + " ");
